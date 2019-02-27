@@ -1,0 +1,9 @@
+<h1>Thanks for adding a new restaurant</h1>
+<%= simple_form_for (@restaurant) do |f| %>
+  <%= f.input :name, placeholder: 'Name', error: 'Name is mandatory, please specify one' %>
+  <%= f.input :address, placeholder: 'Address' %>
+  <%= f.input :phone_number, placeholder: '033-452-367' %>
+  <%= f.input :category, placeholder: 'Category' %>
+  <%= f.button :submit, value: "Let's do it"%>
+<% end %>
+<p><%= link_to "Home", restaurants_path(@restaurants) %></p>
